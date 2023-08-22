@@ -1,0 +1,105 @@
+.pagelibrary{
+    .poster{
+        background-image: url(../img/posterga.jpg);
+    }
+
+    .gallery{
+        &__control{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            margin-bottom: 50px;
+            &-categories{
+                display: flex;
+                align-items: center;
+                a{
+                    padding: 10px;
+                    display: block;
+                    @include text(14px, owl, initial, $white-cl, uppercase);
+                    border-bottom: 1px solid $yellow-cl;
+                    position: relative;
+
+                    @include transition($t);
+                    &::after{
+                        content: '';
+                        display: none;
+                        width: 100%;
+                        height: 3px;
+                        background-color: $yellow-cl;
+                        margin-top: 20px;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        margin-bottom: -2px;
+
+                        opacity: 0;
+                        @include transition($t);
+                    }
+                    &.active{
+                        &::after{
+                            display: block;
+                            opacity: 1;
+                            @include transition($t);
+                        }
+                    }
+                }
+            }
+        }
+        .gallery__list{
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            grid-auto-rows: 450px;
+            display: none;
+
+            margin-top: 24px;
+            &-item{
+                i{
+                    overflow: hidden;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                   
+                    
+                  .icon{
+                        width: auto;
+                        height: auto;
+                        object-fit: cover;
+                        z-index: 10;
+                        @include transition($t);
+                        @include transform(translate(-50%, -50%) scale(0));
+                        
+                    }  
+                }
+                
+                &:hover{
+                    i{
+                        .icon{
+                           @include transition($t);
+                            @include transform(translate(-50%, -50%) scale(1)); 
+                        }
+                    }
+                    img{
+                        @include transform(translate(-50%, -50%) scale(1));
+                    }
+                }
+            }
+
+            &.active{
+                display: grid;
+            }
+
+            @include md{
+                grid-auto-rows: 400px;
+            }
+            @include sm{
+                grid-auto-rows: 150px;
+                gap: 10px;
+                margin-top: 10px;
+            }
+        }
+    }
+
+
+}

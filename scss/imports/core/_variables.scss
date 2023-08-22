@@ -1,0 +1,100 @@
+//======================================================BOXED LAYOUT=======================================================
+
+$container-max-width: 100%;
+$container-width: 1230px; // tùy thuộc vào container của bản thiết kế // $container-width = container (đo từ bản thiết kế) + 30px
+$pd-container: calc((100vw - 1230px -15px)/2);
+
+
+/*GRID - media queries breakpoints*/
+$xxs-min: 576px; // CÓ THỂ TÙY CHỈNH
+$xs-min: 768px; // KHÔNG THAY ĐỔI
+$sm-min: 992px; // KHÔNG THAY ĐỔI
+$md-min: 1200px; // KHÔNG THAY ĐỔI
+$lg-min: 1600px; // CÓ THỂ TÙY CHỈNH
+
+$xxs-max: ($xxs-min - 1); // Small Mobile
+$xs-max: ($xs-min - 1); // Mobile
+$sm-max: ($sm-min - 1); // Tablet
+$md-max: ($md-min - 1); // Desktop
+$lg-max: ($lg-min - 1); // Large Desktop
+
+//=====================================CÁC BIẾN KHÔNG THAY ĐỔI GIÁ TRỊ KHI RESPONSIVE======================================
+// primary colors - tuỳ chỉnh
+$yellow-cl: #B68C2D;
+$white-cl: #fff;
+$black-cl: #000;
+$dark-blue-cl: #1C2329;
+
+$gradient-cl: linear-gradient(180deg, #df1cff 0%, #814bf6 50.55%, #00bcff 100%);
+
+// text colors - tuỳ chỉnh
+$text-cl: #FFFFFF;
+
+// background colors - tuỳ chỉnh
+$bg-main-cl: #0E1317;
+$bg-dark-cl: #090C0F;
+
+
+// timing transition - tuỳ chỉnh
+$t: 0.5s;
+$cubic: cubic-bezier(0.84, 0.13, 0.33, 0.97);
+
+// ========================================CÁC BIẾN CÓ THAY ĐỔI GIÁ TRỊ KHI RESPONSIVE=====================================
+
+:root {
+    //=========== VÍ DỤ ============//
+
+    // font-size & line-height heading
+
+    --h1-fs: 128px;
+    --h1-lh: 0;
+
+    --h2-fs: 40px;
+    --h2-lh: 54px;
+
+    --h3-fs: 24px;
+    --h3-lh: 40px;
+
+    --body16-fs: 16px;
+    --body16-lh: 30px;
+
+    --body14-fs: 14px;
+    --body14-lh: 20px;
+
+    // Genaral Variable
+
+    --gap: 30px; // gap này sử dụng cho gap cột & padding của container, container-fluid
+
+    --height-header: 100px;
+    --height-button: 64px;
+    --ptop: 100px;
+    --pd-section: 100px;
+
+    @media (max-width: $sm-max) {
+        // Tablet
+    }
+    @media (max-width: $xs-max) {
+        // Mobile
+        // --h1-fs: 3.6rem;
+        --h1-fs: 60px;
+        --h1-lh: 4.2rem;
+
+        --h2-fs: 25px;
+        --h2-lh: 3.8rem;
+
+        --h3-fs: 20px;
+        --h3-lh: 24px;
+
+        --h4-fs: 2rem;
+        --h4-lh: 3.2rem;
+
+        --body16-fs: 14px;
+        --body16-lh: 20px;
+
+        --gap: 20px;
+
+        --height-header: 70px;
+        --pd-section: 50px;
+        --ptop: 120px;
+    }
+}

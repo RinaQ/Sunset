@@ -1,0 +1,60 @@
+.pagemenu{
+    .poster{
+        background-image: url(../img/postermenu.jpg);
+    }
+
+    .reserve{
+        &__left{
+            &-gap,
+            &-form{
+                background-color: black;
+            }
+        }
+        &__right{
+            .contacts{
+                margin: 24px 0;
+                li{
+                   .text{
+                        padding-left: 40px;
+                    } 
+                }
+            }
+            .socials{
+                li{
+                    a{
+                        background-color: $yellow-cl;
+                        border-color: $yellow-cl;
+                    }
+                    &:hover{
+                        a{
+                            background-color: transparent;
+                            border-color: $white-cl;
+                        }
+                    }
+                }
+            }
+        }
+        @include sm{
+            .reserve__left{
+                margin-top: -20px;
+            }
+        }
+    }
+
+    .map{
+        height: 400px;
+        position: relative;
+        iframe{
+            position: relative;
+            z-index: 10;
+
+        }
+        @include xxs{
+            height: 300px;
+            iframe{
+                height: 350px;
+            }
+        }
+    }
+
+}

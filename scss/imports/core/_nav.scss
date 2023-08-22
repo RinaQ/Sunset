@@ -1,0 +1,42 @@
+// // css navigator (Menu)
+.nav{
+    width: 100vw;
+    height: calc(100vh - var(--height-header));
+
+    position: fixed;
+    top: var(--height-header);
+    left: 0;
+    
+    background-color: black;
+    z-index: 300;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    opacity: 0;
+    visibility: hidden;
+
+    @include transition($t);
+    ul{
+        li{
+            text-align: center;
+            padding: 15px 25px;
+            a{
+                @include text(15px, owl, normal, $white-cl, uppercase );
+                letter-spacing: 0.25;
+            }
+            &:hover,
+            &.active{
+                a{
+                    color: $yellow-cl;
+                }
+            }
+        }
+    }
+    &.active{
+        opacity: 1;
+        visibility: visible;
+        @include transition($t);
+    }
+}

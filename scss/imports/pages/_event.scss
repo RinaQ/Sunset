@@ -1,0 +1,30 @@
+.pageevent{
+    .poster{
+        background-image: url(../img/posterevent.jpg);
+    }
+
+    .event{
+        .thumb__list{
+            --mLeft: 24px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: var(--mLeft);
+            .thumb{
+                width: 100%;
+                margin-left: 0;
+            }
+            @include md {
+                grid-template-columns: 1fr 1fr;
+            }
+            @include xs {
+                grid-template-columns: 1fr;
+                --mLeft: 0;
+            }
+        }
+        .btn{
+            margin-top: 60px;
+        }
+    }
+
+
+}

@@ -1,0 +1,40 @@
+.pagemenu{
+    .poster{
+        background-image: url(../img/postermenu.jpg);
+    }
+
+    .categories{
+        padding: 100px 24px;
+        .boxs{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            .box{
+                width: 100%;
+                a{
+                    span{
+                        @include text(72px, cmrsbi, 1, $white-cl, capitalize);
+                        @include mid;
+                        z-index: 10;
+                    }
+                }
+            }
+            @include sm {
+                .box{
+                    max-height: 400px;
+                    a{
+                        span{
+                            font-size: 40px;
+                        }
+                    }
+                }
+            }
+            @include xs {
+                grid-template-columns: 1fr;
+            }
+
+        }
+    }
+
+
+}

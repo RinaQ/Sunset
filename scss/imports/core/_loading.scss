@@ -1,0 +1,14 @@
+// css loading
+.preloader{
+    background: black url(../img/loader.gif) no-repeat center;
+    background-size: 10%;
+
+    height: 100vh;
+    width: 100vw;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3000!important;
+
+}

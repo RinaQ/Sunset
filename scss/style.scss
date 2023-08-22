@@ -1,0 +1,31 @@
+/* Core variables and mixins*/
+@import "imports/core/reset";
+@import "imports/core/variables";
+@import "imports/core/mixins";
+@import "imports/core/layouts";
+@import "imports/core/components";
+@import "imports/core/libs";
+@import "imports/core/loading";
+@import "imports/core/bootstrap_mini"; // Nếu không Responsive bằng BooTstrap 4 Grid thì không cần import vào.
+
+/* Navigation, header, footer*/
+@import "imports/core/header";
+@import "imports/core/nav";
+@import "imports/core/footer";
+
+/* Pages */
+@import "imports/pages/home";
+@import "imports/pages/about";
+@import "imports/pages/service";
+@import "imports/pages/event";
+@import "imports/pages/eventdetail";
+@import "imports/pages/menu";
+@import "imports/pages/menudetail";
+@import "imports/pages/monau";
+@import "imports/pages/trangmieng";
+@import "imports/pages/blog";
+@import "imports/pages/location";
+@import "imports/pages/locationdetail";
+@import "imports/pages/library";
+@import "imports/pages/contact";
+// @import "imports/pages/about";
